@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    volumes:
+      # Change the first part of the next line to where you would like uploaded files to go
+      - ~/Downloads/shuttledrop:/uploads
+
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    ports:
+      - "8000:8000"
